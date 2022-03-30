@@ -100,7 +100,8 @@
                                 <p class="card-text">B. {{question.op2}}</p>
                                 <p class="card-text">C. {{question.op3}}</p>
                                 <p class="card-text">D. {{question.op4}}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <p class="card-text">Answer: {{question.answer}}</p>
+                                <a class="btn btn-primary" (click)="verify(question.id)">Verify</a>
                             </div>
                         </div>
                         <br>
