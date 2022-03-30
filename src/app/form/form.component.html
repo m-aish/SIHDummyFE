@@ -30,11 +30,11 @@
             <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Tags" [formControl]="tags">
         </div>
         <div class="form-group">
-            <label for="explanation">Explanation</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Explanation" [formControl]="explanation">
+            <label for="explanation">Difficulty</label>
+            <input type="text" class="form-control" id="difficulty" placeholder="Explanation" [formControl]="difficulty">
         </div>
         <br>
         <button type="submit" (click)="addStudents()" 
-        class="btn btn-primary">Add Student</button>
+        class="btn btn-primary" id="submitbtn">Add Student</button>
     </form>
 </div>

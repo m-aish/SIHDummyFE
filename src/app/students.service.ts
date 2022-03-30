@@ -10,10 +10,10 @@ export class StudentsService {
   addStudents(student: any)
   {
     console.log(student)
-    this.httpClient.post('http://localhost:8000/add', student, {'headers': {'content-type': 'application/json'}}).subscribe((data)=>console.log(data));
+    this.httpClient.post('http://192.168.83.48:8000/quesbank/addQuestion', student, {'headers': {'content-type': 'application/json'}}).subscribe((data)=>console.log(data));
     this.httpClient.get('http://localhost:8000/view').subscribe((data: any)=>{console.log(data)})
   }
   getQuestions () {
-    this.httpClient.get('http://192.168.242.48:3000/getQuestions').subscribe((data)=> {console.log(data)});
+    return this.httpClient.get('http://192.168.83.48:8000/quesbank/getQuestions');
   }
 }

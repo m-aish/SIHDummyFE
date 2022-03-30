@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
   option4 = new FormControl();
   answer = new FormControl();
   tags = new FormControl();
-  explanation = new FormControl();
+  difficulty = new FormControl();
   constructor(private httpClient: HttpClient, private studentsService: StudentsService) { }
 
   ngOnInit(): void {
@@ -26,16 +26,16 @@ export class FormComponent implements OnInit {
   }
   addStudents() {
     let student ={
-      question: this.question.value,
-      option1: this.option1.value,
-      option2: this.option2.value,
-      option3: this.option3.value,
-      option4: this.option4.value,
+      content: this.question.value,
+      op1: this.option1.value,
+      op2: this.option2.value,
+      op3: this.option3.value,
+      op4: this.option4.value,
       answer: this.answer.value,
       tags: this.tags.value,
-      explanation: this.explanation.value,
+      difficulty:this.difficulty.value,
     }
-    //console.log(student);
+    console.log(student);
     this.studentsService.addStudents(student);
   }
 }

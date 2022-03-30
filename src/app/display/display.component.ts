@@ -11,8 +11,9 @@ export class DisplayComponent implements OnInit {
   constructor(private studentsService: StudentsService) { }
   questions: any;
   ngOnInit(): void {
-    this.questions = this.studentsService.getQuestions();
-    console.log(this.questions);
+    this.studentsService.getQuestions().subscribe((data)=>{
+      this.questions = data;
+    })
   }
 
 
