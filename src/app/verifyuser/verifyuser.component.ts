@@ -15,5 +15,8 @@ export class VerifyuserComponent implements OnInit {
       this.users = data;
     })
   }
+  verifyUser(student) {
+    this.studentsService.verifyUser(student);
+  }
 
 }

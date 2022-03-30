@@ -18,5 +18,10 @@ export class NavbarComponent implements OnInit {
   navverify() {
     this.route.navigate(['/verify']);
   }
-
+  navverifyuser(){
+    this.route.navigate(['/verifyuser'])
+  }
+  navhome(){
+    this.route.navigate(['/'])
+  }
 }

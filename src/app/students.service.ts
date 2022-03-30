@@ -18,7 +18,14 @@ export class StudentsService {
   }
   getUsers (){
     return this.httpClient.get('http://192.168.83.48:8000/users/viewUser');
-  getNonVerifiedQuestions(){
+  }
+    getNonVerifiedQuestions(){
     return this.httpClient.get('http://192.168.83.48:8000/quesbank/getQuestions');
+  }
+  verifyUser(student){
+    return this.httpClient.post('http://192.168.83.48:8000/users/verifyuser', student, {'headers': {'content-type': 'application/json'}}).subscribe((data)=>console.log(data));
+  }
+  verifyQuestion(id){
+    return this.httpClient.post('http://192.168.83.48:8000/quesbank/verifyques', {"id": id}, {'headers': {'content-type': 'application/json'}}).subscribe((data)=>console.log(data));
   }
 }
