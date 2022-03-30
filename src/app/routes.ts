@@ -6,7 +6,7 @@ import { DisplaynotverifiedComponent } from './displaynotverified/displaynotveri
 export const routes: Routes = [
     {path:'home', component: DisplayComponent},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    {path: 'add', component: FormComponent},
+    {path: 'add', component : FormComponent},
     {path: 'apply', component: ApplyComponent},
     {path: 'verify', component: DisplaynotverifiedComponent}
 ]
