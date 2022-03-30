@@ -15,5 +15,8 @@ export class NavbarComponent implements OnInit {
   navadd() {
     this.route.navigate(['/add']);
   }
+  navverify() {
+    this.route.navigate(['/verify']);
+  }
 
 }

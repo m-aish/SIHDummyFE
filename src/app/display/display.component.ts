@@ -15,6 +15,4 @@ export class DisplayComponent implements OnInit {
       this.questions = data;
     })
   }
-
-
 }
