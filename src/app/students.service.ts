@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class StudentsService {
 
   constructor(private httpClient: HttpClient) { }
-  addStudents(student: any)
+  addQuestions(student: any)
   {
     console.log(student)
     this.httpClient.post('http://192.168.83.48:8000/quesbank/addQuestion', student, {'headers': {'content-type': 'application/json'}}).subscribe((data)=>console.log(data));

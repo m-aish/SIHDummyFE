@@ -10,13 +10,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ApplyComponent } from './apply/apply.component';
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     DisplayComponent,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ApplyComponent
   ],
   imports: [
     BrowserModule,
