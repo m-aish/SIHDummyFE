@@ -8,6 +8,7 @@ import { DisplayComponent } from './display/display.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { ApplyComponent } from './apply/apply.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     FormComponent,
     DisplayComponent,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ApplyComponent
   ],
   imports: [
     BrowserModule,
