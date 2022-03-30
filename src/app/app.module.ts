@@ -11,7 +11,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyComponent } from './apply/apply.component';
-import { QpaperComponent } from './qpaper/qpaper.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { QpaperComponent } from './qpaper/qpaper.component';
     NavbarComponent,
     SidenavComponent,
     ApplyComponent,
-    QpaperComponent
+
   ],
   imports: [
     BrowserModule,
