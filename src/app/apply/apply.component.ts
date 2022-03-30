@@ -30,6 +30,6 @@ export class ApplyComponent implements OnInit {
       exp: this.exp.value,
     }
     //console.log(student);
-    this.studentsService.addStudents(student);
+    //this.studentsService.addS(student);
   }
 }

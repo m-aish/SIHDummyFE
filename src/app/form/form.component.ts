@@ -39,15 +39,16 @@ export class FormComponent implements OnInit {
       op3: this.option3.value,
       op4: this.option4.value,
       answer: this.answer.value,
-      tags: this.tags.value,
+      tags: this.fruits[0].name,
       difficulty:this.difficulty.value,
     }
+    console.log(this.fruits[0].name);
     //console.log(student);
     this.studentsService.addQuestions(student);
   }
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
-  fruits: Fruit[] = [{name: 'Lemon'}, {name: 'Lime'}, {name: 'Apple'}];
+  fruits = [];
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
