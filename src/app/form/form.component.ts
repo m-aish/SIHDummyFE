@@ -10,9 +10,14 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  name = new FormControl();
-  regnum = new FormControl();
-  std = new FormControl();
+  question = new FormControl();
+  option1 = new FormControl();
+  option2 = new FormControl();
+  option3 = new FormControl();
+  option4 = new FormControl();
+  answer = new FormControl();
+  tags = new FormControl();
+  explanation = new FormControl();
   constructor(private httpClient: HttpClient, private studentsService: StudentsService) { }
 
   ngOnInit(): void {
@@ -21,9 +26,14 @@ export class FormComponent implements OnInit {
   }
   addStudents() {
     let student ={
-      name: this.name.value,
-      regnum: parseInt(this.regnum.value),
-      std: parseInt(this.std.value)
+      question: this.question.value,
+      option1: this.option1.value,
+      option2: this.option2.value,
+      option3: this.option3.value,
+      option4: this.option4.value,
+      answer: this.answer.value,
+      tags: this.tags.value,
+      explanation: this.explanation.value,
     }
     //console.log(student);
     this.studentsService.addStudents(student);
