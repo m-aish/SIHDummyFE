@@ -9,10 +9,17 @@ import { StudentsService } from '../students.service';
 export class DisplayComponent implements OnInit {
 
   constructor(private studentsService: StudentsService) { }
-  questions: any;
+  questions=[];
   ngOnInit(): void {
     this.studentsService.getQuestions().subscribe((data)=>{
-      this.questions = data;
+      // this.questions = data;
+      for (let variable in data) {
+        if((data[variable].isVerified) == true)
+        {
+          console.log(data[variable].content)
+          this.questions.push(data[variable])
+        }
+      }
     })
   }
 }
