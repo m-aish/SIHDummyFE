@@ -18,5 +18,7 @@ export class StudentsService {
   }
   getUsers (){
     return this.httpClient.get('http://192.168.83.48:8000/users/viewUser');
+  getNonVerifiedQuestions(){
+    return this.httpClient.get('http://192.168.83.48:8000/quesbank/getQuestions');
   }
 }
