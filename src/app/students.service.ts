@@ -16,4 +16,7 @@ export class StudentsService {
   getQuestions () {
     return this.httpClient.get('http://192.168.83.48:8000/quesbank/getQuestions');
   }
+  getUsers (){
+    return this.httpClient.get('http://192.168.83.48:8000/users/viewUser');
+  }
 }
