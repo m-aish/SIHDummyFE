@@ -11,6 +11,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyComponent } from './apply/apply.component';
+import { DisplaynotverifiedComponent } from './displaynotverified/displaynotverified.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ApplyComponent } from './apply/apply.component';
     DisplayComponent,
     NavbarComponent,
     SidenavComponent,
-    ApplyComponent
+    ApplyComponent,
+    DisplaynotverifiedComponent
   ],
   imports: [
     BrowserModule,
