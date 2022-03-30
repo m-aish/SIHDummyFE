@@ -8,8 +8,9 @@ import { DisplayComponent } from './display/display.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyComponent } from './apply/apply.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,9 @@ import { ApplyComponent } from './apply/apply.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatChipsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
