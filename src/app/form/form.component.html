@@ -2,39 +2,53 @@
     <form>
         <div class="form-group">
             <label for="question">Question</label>
-            <input type="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Type your question here" [formControl]="question">
+            <input type="" class="form-control" id="question" placeholder="Type your question here" [formControl]="question">
         </div>
         <div class="form-group">
             <label for="option 1">Option 1</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Option 1" [formControl]="option1">
+            <input type="text" class="form-control" id="op1" placeholder="Option 1" [formControl]="option1">
         </div>
         <div class="form-group">
             <label for="option2">Option 2</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Option 2" [formControl]="option2">
+            <input type="text" class="form-control" id="op2" placeholder="Option 2" [formControl]="option2">
         </div>
         <div class="form-group">
             <label for="option3">Option 3</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Option 3" [formControl]="option3">
+            <input type="text" class="form-control" id="op3" placeholder="Option 3" [formControl]="option3">
         </div>
         <div class="form-group">
             <label for="option4">Option 4</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Option 4" [formControl]="option4">
+            <input type="text" class="form-control" id="op4" placeholder="Option 4" [formControl]="option4">
         </div>
         <div class="form-group">
             <label for="answer">Answer</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Answer" [formControl]="answer">
+            <input type="text" class="form-control" id="answer" placeholder="Answer" [formControl]="answer">
         </div>
         <div class="form-group">
-            <label for="tags">Tags</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Tags" [formControl]="tags">
+            <!--<input type="text" class="form-control" id="exampleInputPassword2" placeholder="Tags" [formControl]="tags">-->
+            <mat-form-field class="example-chip-list" appearance="fill">
+                <mat-label>Tags</mat-label>
+                <mat-chip-list #chipList aria-label="Fruit selection">
+                  <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+                    {{fruit.name}}
+                    <button matChipRemove>
+                      <mat-icon>cancel</mat-icon>
+                    </button>
+                  </mat-chip>
+                  <input placeholder="New fruit..." id="tags"
+                         [matChipInputFor]="chipList"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+              </mat-form-field>                   
         </div>
         <div class="form-group">
             <label for="explanation">Explanation</label>
-            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Explanation" [formControl]="explanation">
+            <input type="text" class="form-control" id="explanation" placeholder="Explanation" [formControl]="explanation">
         </div>
         <br>
-        <button type="submit" (click)="addStudents()" 
+        <button type="submit" (click)="addQuestions()" 
         class="btn btn-primary">Add Student</button>
     </form>
 </div>
