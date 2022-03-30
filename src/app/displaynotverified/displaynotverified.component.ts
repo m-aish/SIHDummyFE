@@ -14,7 +14,7 @@ export class DisplaynotverifiedComponent implements OnInit {
     
     this.studentsService.getQuestions().subscribe((data)=>{
       for (let variable in data) {
-        if((data[variable].isVerified) == true)
+        if(!(data[variable].isVerified) == true)
         {
           console.log(data[variable].content)
           this.arrsy.push(data[variable])

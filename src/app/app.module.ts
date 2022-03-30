@@ -20,7 +20,11 @@ import { DisplaynotverifiedComponent } from './displaynotverified/displaynotveri
     NavbarComponent,
     SidenavComponent,
     ApplyComponent,
+<<<<<<< HEAD
     DisplaynotverifiedComponent
+=======
+
+>>>>>>> 644b004e79c91f9091d04761f0a5acc705b8a1e0
   ],
   imports: [
     BrowserModule,
