@@ -14,7 +14,11 @@ export class StudentsService {
     this.httpClient.get('http://localhost:8000/view').subscribe((data: any)=>{console.log(data)})
   }
   getQuestions () {
+<<<<<<< HEAD
     return this.httpClient.get('http://192.168.127.120:8000/quesbank/getQuestions');
+=======
+    return this.httpClient.get('http://192.168.83.48:8000/quesbank/fetchques');
+>>>>>>> fd1992383f98e3bea18bab5d660fc3004fdc6f3b
   }
   getUsers (){
     return this.httpClient.get('http://192.168.127.120:8000/users/viewUser');
