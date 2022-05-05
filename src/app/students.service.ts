@@ -14,13 +14,13 @@ export class StudentsService {
     this.httpClient.get('http://localhost:8000/view').subscribe((data: any)=>{console.log(data)})
   }
   getQuestions () {
-    return this.httpClient.get('http://192.168.83.48:8000/quesbank/getQuestions');
+    return this.httpClient.get('http://192.168.127.120:8000/quesbank/getQuestions');
   }
   getUsers (){
-    return this.httpClient.get('http://192.168.83.48:8000/users/viewUser');
+    return this.httpClient.get('http://192.168.127.120:8000/users/viewUser');
   }
     getNonVerifiedQuestions(){
-    return this.httpClient.get('http://192.168.83.48:8000/quesbank/getQuestions');
+    return this.httpClient.get('http://192.168.127.120:8000/quesbank/getQuestions');
   }
   verifyUser(student){
     return this.httpClient.post('http://192.168.83.48:8000/users/verifyuser', student, {'headers': {'content-type': 'application/json'}}).subscribe((data)=>console.log(data));

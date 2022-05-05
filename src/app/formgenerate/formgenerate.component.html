@@ -1,0 +1,28 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="subject">Subject or topic of the question paper</label>
+            <input type="" class="form-control" id="subject" placeholder="Type your question here" [formControl]="subject">
+        </div>
+        <div class="form-group">
+            <label for="numberofquestions">Number of questions in the question paper</label>
+            <input type="text" class="form-control" id="numberofquestions" placeholder="Enter number of questions" [formControl]="numberofquestions">
+        </div>
+        <div class="form-group">
+            <label for="difficulty">Average difficulty of the question paper</label>
+            <select class="form-select" [formControl]="difficulty">
+                <option selected>Select difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <!--<input type="dropdown" class="form-control" id="difficulty" placeholder="Select average difficulty of the question paper" [formControl]="difficulty">-->
+        </div>
+        <div class="form-group">
+            <label for="header">Header text to appear on the top of question paper</label>
+            <input type="text" class="form-control" id="header" placeholder="Enter the header content" [formControl]="header">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" id="submitbtn">Generate Question paper</button>
+    </form>
+</div>

@@ -7,13 +7,11 @@
   </div>
   </div>
 <mat-toolbar style="background-color: #0FDDAF" class="navbar" >
-  <div>
-    <div>
-      <span class="btn"><button data-inline="true" (click)="navhome()">HOME</button></span>
-      <span class="btn"><button data-inline="true" (click)="navadd()">ADD QUESTION</button></span>
-      <span class="btn"><button >GENERATE PDF</button></span>
-      <span class="btn"><button data-inline="true" (click)="navverify()">VERIFY Q</button></span>
-      <span class="btn"><button data-inline="true" (click)="navverifyuser()">VERIFY U</button></span>
-    </div>
+  <div class="container">
+    <button type="button" style="color: white; text-decoration: none;" class="btn btn-link" (click)="navhome()">HOME</button>
+    <button type="button" style="color: white; text-decoration: none;" class="btn btn-link" (click)="navadd()">ADD QUESTION</button>
+    <button type="button" style="color: white; text-decoration: none;" class="btn btn-link" (click)="navgenerate()">GENERATE PDF</button>
+    <button type="button" style="color: white; text-decoration: none;" class="btn btn-link" (click)="navverify()">VERIFY Q</button>
+    <button type="button" style="color: white; text-decoration: none;" class="btn btn-link" (click)="navverifyuser()">VERIFY U</button>
   </div>
 </mat-toolbar>

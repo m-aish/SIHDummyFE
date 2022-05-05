@@ -24,4 +24,7 @@ export class NavbarComponent implements OnInit {
   navhome(){
     this.route.navigate(['/'])
   }
+  navgenerate(){
+    this.route.navigate(['/generate'])
+  }
 }

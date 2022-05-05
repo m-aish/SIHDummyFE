@@ -13,6 +13,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyComponent } from './apply/apply.component';
 import { VerifyuserComponent } from './verifyuser/verifyuser.component';
 import { DisplaynotverifiedComponent } from './displaynotverified/displaynotverified.component';
+import { FormgenerateComponent } from './formgenerate/formgenerate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { DisplaynotverifiedComponent } from './displaynotverified/displaynotveri
     SidenavComponent,
     ApplyComponent,
     VerifyuserComponent,
-    DisplaynotverifiedComponent
+    DisplaynotverifiedComponent,
+    FormgenerateComponent
   ],
   imports: [
     BrowserModule,
